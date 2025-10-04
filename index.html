@@ -3,36 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GovernMeme ($GMEME) - Meme Lords Rule All!</title>
-    <meta name="description" content="GovernMeme ($GMEME) - The dankest meme token on Solana, ruling with chaos, airdrops, and government-grade memes! Join or get memed!">
+    <title>GovernMeme ($GMEME) - Meme Warlords Unleashed!</title>
+    <meta name="description" content="GovernMeme ($GMEME) - Rule the memeocracy with epic meme power on Solana. Join the American meme revolution!">
     <style>
         body {
             margin: 0;
-            font-family: 'Impact', 'Arial Black', sans-serif;
-            background: url('https://via.placeholder.com/1920x1080?text=Stars+&+Stripes+Chaos') no-repeat center/cover;
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #b22234, #3c3b6e, #b22234);
+            background-size: 200% 200%;
             color: #fff;
             text-align: center;
             overflow-x: hidden;
-            animation: pulse 5s infinite;
+            animation: flagWave 10s infinite;
         }
-        @keyframes pulse {
-            0% { background-size: 100%; }
-            50% { background-size: 110%; }
-            100% { background-size: 100%; }
+        @keyframes flagWave {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
         }
         .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background: rgba(22, 33, 62, 0.8);
+            background: #3c3b6e;
+            padding: 10px;
             position: sticky;
             top: 0;
             z-index: 10;
+            border-bottom: 3px solid #fff;
         }
         .header img {
-            height: 50px;
-            filter: drop-shadow(2px 2px 5px #e94560);
+            height: 40px;
+            vertical-align: middle;
         }
         .nav a {
             color: #fff;
@@ -43,141 +42,134 @@
             letter-spacing: 2px;
         }
         .nav a:hover {
-            color: #ff6b81;
-            text-shadow: 0 0 10px #ff6b81;
+            color: #ff0;
+            text-shadow: 0 0 5px #ff0;
         }
-        .banner {
-            width: 100%;
-            height: 200px;
-            background: url('https://via.placeholder.com/1920x200?text=GMEME+Meme+Collage') no-repeat center;
-            background-size: cover;
-            position: relative;
-            animation: slide 10s infinite;
-        }
-        @keyframes slide {
-            0% { background-position: 0 0; }
-            50% { background-position: 100% 0; }
-            100% { background-position: 0 0; }
-        }
-        .content {
+        .container {
             padding: 20px;
             position: relative;
+            max-width: 800px;
+            margin: 0 auto;
             background: rgba(0, 0, 0, 0.7);
-            border: 5px solid #e94560;
+            border: 5px solid #b22234;
             border-radius: 10px;
-            margin: 20px auto;
-            max-width: 900px;
         }
         h1 {
-            font-size: 3em;
-            color: #e94560;
-            text-shadow: 3px 3px 10px #000;
+            font-size: 2.5em;
+            color: #ff0;
+            text-shadow: 2px 2px 5px #000;
             margin: 20px 0;
-            animation: bounce 2s infinite;
-        }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
         }
         p {
-            font-size: 1.3em;
-            color: #d1d1d1;
-            max-width: 700px;
+            font-size: 1.1em;
+            color: #fff;
+            max-width: 600px;
             margin: 0 auto 20px;
             line-height: 1.5;
             text-shadow: 1px 1px 3px #000;
         }
+        .loading-bar {
+            width: 80%;
+            height: 20px;
+            background: #000;
+            border: 2px solid #fff;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .loading-bar-inner {
+            width: 0;
+            height: 100%;
+            background: #3c3b6e;
+            animation: load 2s infinite;
+        }
+        @keyframes load {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
         .buttons button {
-            padding: 15px 30px;
+            padding: 10px 20px;
             margin: 0 10px;
-            background: #e94560;
-            border: none;
+            background: #b22234;
+            border: 2px solid #fff;
             color: #fff;
-            font-weight: bold;
-            border-radius: 10px;
-            font-size: 1.1em;
+            font-family: 'Courier New', monospace;
+            font-size: 1em;
             cursor: pointer;
             transition: all 0.3s;
         }
         .buttons button:hover {
-            background: #ff6b81;
-            transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 0 20px #ff6b81;
+            background: #ff0;
+            color: #000;
+            transform: scale(1.1);
+        }
+        .stake {
+            background: #3c3b6e;
+            padding: 10px;
+            border: 2px solid #fff;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1.1em;
+            animation: blink 1.5s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0.7; }
         }
         .character {
             margin-top: 20px;
-            position: relative;
         }
         .character img {
-            max-width: 350px;
-            border: 10px solid #fff;
-            border-radius: 20px;
-            animation: spin 4s infinite linear;
-        }
-        @keyframes spin {
-            100% { transform: rotate(360deg); }
-        }
-        .stake {
-            background: #2ecc71;
-            padding: 15px;
+            max-width: 300px;
+            border: 5px solid #fff;
             border-radius: 10px;
-            display: inline-block;
-            margin-top: 20px;
-            font-size: 1.2em;
-            text-transform: uppercase;
-            animation: flash 1.5s infinite;
-        }
-        @keyframes flash {
-            50% { opacity: 0.7; }
         }
         .footer {
             margin-top: 20px;
             padding: 10px;
-            background: rgba(22, 33, 62, 0.8);
+            background: #3c3b6e;
+            border-top: 3px solid #fff;
         }
         .footer a {
-            display: inline-block;
-            margin: 0 15px;
             color: #fff;
-            font-size: 1.1em;
             text-decoration: none;
-            transition: color 0.3s;
+            margin: 0 15px;
+            font-size: 1em;
         }
         .footer a:hover {
-            color: #ff6b81;
-            text-shadow: 0 0 15px #ff6b81;
+            color: #ff0;
+            text-shadow: 0 0 5px #ff0;
         }
         @media (max-width: 600px) {
-            h1 { font-size: 2em; }
-            p { font-size: 1em; }
+            h1 { font-size: 1.8em; }
+            p { font-size: 0.9em; }
             .character img { max-width: 200px; }
-            .banner { height: 120px; }
-            .buttons button { padding: 10px 20px; }
+            .buttons button { padding: 8px 15px; }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="https://via.placeholder.com/50?text=GMEME" alt="GovernMeme Logo">
+        <img src="https://via.placeholder.com/40?text=GMEME" alt="GovernMeme Logo">
         <div class="nav">
             <a href="#home">Home</a>
             <a href="#roadmap">Roadmap</a>
-            <a href="#collection">Meme Vault</a>
+            <a href="#meme-vault">Meme Vault</a>
             <a href="#chart">Chart</a>
-            <a href="https://x.ai/grok" target="_blank">Buy $GMEME NOW</a>
+            <a href="https://x.ai/grok" target="_blank">Buy $GMEME</a>
         </div>
     </div>
-    <div class="banner"></div>
-    <div class="content">
-        <h1>MEME WARLORDS UNLEASHED!</h1>
-        <p>Meet MemeLord — the sombrero-wearing, laser-eyed king of chaos, memeing harder than the government on X! Vote on dankest drops, snag airdrops, and rule the Solana blockchain with epic meme power. This ain’t just a token—it’s a revolution! 🇺🇸💥😂</p>
+    <div class="container">
+        <h1>MEWLORD UNLEASHED!</h1>
+        <p>Meet MemeLord — the pixelated patriot memeing harder than the government on X! Vote on dank drops, snag airdrops, and rule the Solana blockchain with 'Murica-tier meme power. This ain’t just a token—it’s a revolution! 🇺🇸💥</p>
+        <div class="loading-bar">
+            <div class="loading-bar-inner"></div>
+        </div>
         <div class="buttons">
             <button onclick="window.location.href='https://x.ai/grok'">Drop the Meme Bomb</button>
-            <button onclick="window.location.href='#collection'">Raid the Vault</button>
+            <button onclick="window.location.href='#meme-vault'">Raid the Vault</button>
         </div>
-        <div class="stake">Stake $GMEME & Earn 50% MORE WEEKLY! 🎉💰</div>
+        <div class="stake">Stake $GMEME & Earn 50% More Weekly! 💰</div>
         <div class="character">
-            <img src="https://via.placeholder.com/350?text=MemeLord+Sombrero+Laser" alt="MemeLord Character">
+            <img src="https://via.placeholder.com/300?text=MemeLord+Patriot" alt="MemeLord Character">
         </div>
     </div>
     <div class="footer">
